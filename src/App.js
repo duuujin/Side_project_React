@@ -12,11 +12,18 @@ function App() {
   let posts = "강남 고기 맛집";
   let [like, plusLike] = useState(0);
 
+  function 제목바꾸기(){
+    var newArray = [...title];
+    newArray[0] = '여자코트 추천';
+    changeTitle( newArray);
+  }
+
   return (
     <div className="App">
       <div className="black-nav">
         <div>개발 Blog</div>
       </div>
+      <button onClick={ 제목바꾸기 }>버튼</button>
       <div className="list">
         <h3>
           {title[0]} <span onClick={() => {plusLike(like+1)}}>❤️</span> {like}{" "}
